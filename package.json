@@ -10,7 +10,7 @@
     "coc-tsserver": ">=2.0.8"
   },
   "comments" : {
-    "purpose" : "List of all plugins used for Web Dev"
+    "purpose" : "List of all plugins for my personal use"
   },
   "disabled": [],
   "locked": []
