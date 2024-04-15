@@ -9,7 +9,7 @@ PROMPT='
 RPROMPT='[%F{green} Code ⚡️ Sleep ⚡️ Repeat ⚡️%f]'
 
 
-# Retrieving IP Address using awk
+# Retrieving IP Address for different interfaces such as tun0, wirless interface using awk and piping the output to a null file location
 get_ip_address() {
   if [[ -n "$(ifconfig tun0 2>/dev/null)" ]]; then
     echo "%{$fg[green]%}$(ifconfig tun0 | awk '/inet / {print $2}')%{$reset_color%}"
