@@ -1,15 +1,15 @@
 #Author : Nithish Raina <Nithish> 
 
-# Left Prompt
+#Left Prompt
 PROMPT='
 ┌─[%F{blue} %~%f] [%F{blue}😎 Nithish Raina %f] [%F{green} $(get_ip_address)%f] $(git_prompt_info)
 └─➜ '
 
-# Right Prompt
+#Right Prompt
 RPROMPT='[%F{green} Code ⚡️ Sleep ⚡️ Repeat ⚡️%f]'
 
 
-# Retrieving IP Address for different interfaces such as tun0, wirless interface using awk and piping the output to a null file location
+#Retrieving IP Address using awk
 get_ip_address() {
   if [[ -n "$(ifconfig tun0 2>/dev/null)" ]]; then
     echo "%{$fg[green]%}$(ifconfig tun0 | awk '/inet / {print $2}')%{$reset_color%}"
